@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkShrink - Make Your Links Shorter & Smarter</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23667eea'><path d='M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H4V5h7V3H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z'/></svg>" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+        <div class="bg-shape"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">🔗 LinkShrink</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Make Your Links <span class="gradient-text">Shorter & Smarter</span></h1>
+            <p class="hero-subtitle">Transform long, unwieldy URLs into clean, memorable links that are perfect for
+                sharing anywhere</p>
+
+            <div class="shortener-container">
+                <div class="url-form" id="urlForm">
+                    <div class="input-group">
+                        <input type="url" class="url-input" id="urlInput"
+                            placeholder="https://example.com/very/long/url/that/needs/shortening" required>
+                    </div>
+                    <button type="button" class="shorten-btn" id="shortenBtn">
+                        <span id="btnText">✨ Shorten URL</span>
+                    </button>
+                </div>
+
+                <div class="result-container" id="resultContainer">
+                    <div class="result-url">
+                        <input type="text" class="short-url" id="shortUrl" readonly>
+                        <button class="copy-btn" id="copyBtn">📋 Copy</button>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin: 0;">
+                        🎉 Your link has been shortened! Click to copy and share anywhere.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <h2 class="section-title">Why Choose LinkShrink?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Generate shortened URLs in milliseconds with our optimized algorithms and global CDN network.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure & Private</h3>
+                <p>All links are encrypted and protected. We never store your personal data or track your activity.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Mobile Friendly</h3>
+                <p>Perfect for social media, SMS, and any platform. Works seamlessly on all devices and browsers.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Click Analytics</h3>
+                <p>Track your link performance with detailed analytics and insights about your audience.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Custom Domains</h3>
+                <p>Use your own domain for branded short links that build trust and recognition.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Global Network</h3>
+                <p>Worldwide server network ensures your short links load instantly from anywhere in the world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number" id="linksCount">1M+</span>
+                <div class="stat-label">Links Shortened</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="clicksCount">50M+</span>
+                <div class="stat-label">Clicks Served</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="usersCount">100K+</span>
+                <div class="stat-label">Happy Users</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="uptimeCount">99.9%</span>
+                <div class="stat-label">Uptime</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <p>&copy; 2024 LinkShrink. Making the web more accessible, one link at a time.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">API Docs</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
